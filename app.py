@@ -62,6 +62,13 @@ sys.stdout = capture_stream
 def get_captured_output():
     return capture_stream.get_output()
 
+def createDirectory(directory):
+    try:
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+    except OSError:
+        print("Error: Failed to create the directory.")
+
 
 ## yolo 실행
 def run_yolo(input_video_url):
@@ -125,6 +132,7 @@ if __name__ == "__main__":
     )
     args=parser.parse_args()
 
+    createDirectory('./video/out/')
     # Gradio UI
     with gr.Blocks() as demo:
 
