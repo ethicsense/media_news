@@ -19,7 +19,7 @@ from datetime import datetime
 object_name 변수
  : 맨 밑에 makdowon과 Model에서 사용합니다. 
 '''
-object_name = "Edge AI FashionCaster"
+object_name = "Edge AI NewsCaster"
 stop_execution = False # Global flag to control execution
 
 def stop_functions():
